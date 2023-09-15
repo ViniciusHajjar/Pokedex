@@ -14,14 +14,18 @@ function loadPokemonItens(offset, limit) {
             <span class="number">${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
             <div class="detail">
-                <div>
+                <div class="detailList">
                     <ol class="types">
                         ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
-                        <div class="moreButton">
-                        <button class="type ${pokemon.type} moreDetail">+</button>                       
-                        </div>
                     </ol>
-                </div>
+                    <span class="about">About</span>
+                    <span class="aboutItem">Height: ${pokemon.height /10} m</span>
+                    <span class="aboutItem">Weight: ${pokemon.weight /10} kg</span>
+                    <span class="about">Abilities</span>
+                    <ol class="abilities">
+                        ${pokemon.abilities.map((ability) => `<li class="ability">${ability}</li>`).join('')}
+                    </ol>
+                    </div>
                 <img src="${pokemon.photo}" 
                 alt="${pokemon.name}">
             </div>
